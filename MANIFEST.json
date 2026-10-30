@@ -1,0 +1,35 @@
+{
+  "agent_created_skills": [],
+  "company_skills": [
+    "a2a-role-learning"
+  ],
+  "excluded": [
+    "personal memory: never exported to a public repository",
+    "conversations and sessions: never exported",
+    "attachments and project outputs: never exported",
+    "API keys, provider settings, and .env files: never exported",
+    "knowledge/company/a2a-role-learning/scripts/__pycache__/compile_role_learning.cpython-312.pyc: blocked path"
+  ],
+  "files": {
+    "knowledge/company/a2a-role-learning/SKILL.md": {
+      "bytes": 5577,
+      "sha256": "8feffe49bcacf72350b72932d5645d07656b241a5876718ea38698b8d508c209"
+    },
+    "knowledge/company/a2a-role-learning/references/role-learning-registry.json": {
+      "bytes": 19612,
+      "sha256": "ab71bc6a98313d7a0d3287cabd6df845812eb2c80ce209b1f181135c5cb8ee9b"
+    },
+    "knowledge/company/a2a-role-learning/scripts/compile_role_learning.py": {
+      "bytes": 13519,
+      "sha256": "6ca6c17c01b15e0eff6c331451ef172a2008692406ee2cc0b1583488692c3b5e"
+    },
+    "knowledge/curator/usage.json": {
+      "bytes": 3,
+      "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356"
+    }
+  },
+  "generated_at": "2026-10-30T07:50:08.045213+00:00",
+  "public_safe": true,
+  "schema": "hermes-public-knowledge/v1",
+  "skipped_agent_skills": []
+}

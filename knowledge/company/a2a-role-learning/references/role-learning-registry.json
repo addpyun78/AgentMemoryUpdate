@@ -1,0 +1,266 @@
+{
+  "schema": "a2a-role-learning-registry/v1",
+  "version": "2026-10-30.1",
+  "source_report": "qa/THREADS_ROLE_SKILL_UPGRADE_REPORT_2026-10-30.md",
+  "source_policy": {
+    "A": "Firsthand process, numbers, failure, or repair evidence; cross-check before adoption.",
+    "B": "Repeated practitioner pattern or detailed secondary analysis; require an internal sample test.",
+    "C": "Promotional, gated, outcome-only, or unattributed; keep as an idea only.",
+    "O": "Legal, licensing, security, or product specification claim; verify against an official source."
+  },
+  "profiles": [
+    {
+      "id": "production-project-management",
+      "name_ko": "제작·프로젝트 관리팀",
+      "team_patterns": ["analysis", "coordination", "integration", "acceptance"],
+      "role_patterns": ["REQUIREMENTS_", "INTEGRATION_OWNER", "ACCEPTANCE_LEAD", "PROJECT_MANAGER", "PRODUCER"],
+      "knowledge": [
+        "Decompose requirements into goal, scope, non-scope, acceptance criteria, and inspectable evidence.",
+        "Separate serial dependencies from safe parallel work and preserve passed artifacts during repair.",
+        "Convert repeated review findings into deterministic tests, lint, or CI candidates.",
+        "Track product construction separately from discovery, distribution, monetization, and retention."
+      ],
+      "required_local_skills": ["a2a-automation-system", "a2a-core-runtime"],
+      "upstream_capability_sources": ["aivideogenerator:video-brief", "aivideogenerator:scene-storyboard", "product-design:audit"],
+      "required_capabilities": ["project-contract", "dependency-dag", "change-ledger", "acceptance-evidence"],
+      "expected_artifacts": ["project contract", "dependency graph", "change ledger", "acceptance evidence ledger"],
+      "gpu_policy": "none",
+      "evidence_rule": "A plan is not evidence; inspect returned artifacts and machine-checkable receipts."
+    },
+    {
+      "id": "creative-direction",
+      "name_ko": "감독부",
+      "team_patterns": ["media-preproduction", "media-contract"],
+      "role_patterns": ["DIRECTOR", "CREATIVE_LEAD", "MEDIA_PREPRODUCTION_LEAD", "MEDIA_CONTRACT_LEAD"],
+      "knowledge": [
+        "Unify writing, brand, design, camera, lighting, motion, editing, and color under one creative proposition.",
+        "Resolve cross-department conflicts before production and maintain continuity across scenes and pages.",
+        "Choose resolution, frame rate, pace, and polish for the message rather than maximizing every attribute.",
+        "Approve time-based previews and transitions, not isolated still frames."
+      ],
+      "required_local_skills": ["a2a-automation-system", "a2a-ui-design", "a2a-media-documents"],
+      "upstream_capability_sources": ["aivideogenerator:video-review", "aivideogenerator:cinematic-style-lighting", "aivideogenerator:camera-motion-prompts"],
+      "required_capabilities": ["creative-thesis", "continuity-table", "lighting-color-bible", "timecode-approval"],
+      "expected_artifacts": ["director notes", "continuity table", "lighting and color bible", "timecode approvals"],
+      "gpu_policy": "low for review; rendering is separately budgeted",
+      "evidence_rule": "Approval requires a playable timeline or equivalent timed evidence."
+    },
+    {
+      "id": "customer-market-research",
+      "name_ko": "고객·시장·자료 조사팀",
+      "team_patterns": ["research", "growth"],
+      "role_patterns": ["DEEP_RESEARCHER", "GROWTH_RESEARCHER", "RESEARCH_WRITER", "MATERIAL_QUERY_EDITOR"],
+      "knowledge": [
+        "Distinguish attention metrics from customer problems, cost, conversion, repeat use, and complaints.",
+        "Record failures, counterexamples, and opposing replies alongside success cases.",
+        "Open original bodies and connected posts instead of relying on search snippets.",
+        "Label each claim as firsthand, repeated pattern, promotional, or official-verification-required."
+      ],
+      "required_local_skills": ["a2a-research-browser", "browser-skill"],
+      "upstream_capability_sources": ["browser-skill", "uiuxdesigner:ux-research-plan", "uiuxdesigner:personas-journey-maps"],
+      "required_capabilities": ["authenticated-browser-research", "source-ledger", "customer-problem-map", "claim-evidence-matrix"],
+      "expected_artifacts": ["source ledger", "customer problem map", "competitor alternative table", "claim-evidence matrix"],
+      "gpu_policy": "low",
+      "evidence_rule": "Search visibility and reaction counts are signals, not proof; cite inspected original content."
+    },
+    {
+      "id": "screenwriting-copy",
+      "name_ko": "작가팀",
+      "team_patterns": ["screenwriting", "screenwriting-research"],
+      "role_patterns": ["WRITER", "HOOK_", "SCREEN_COPY", "CONTINUITY_EDITOR", "CAPTION_EDITOR"],
+      "knowledge": [
+        "Design the first three seconds around authority, surprise, concrete loss, or an unresolved question when appropriate.",
+        "Rewrite information density and emotional progression for 15, 30, and 60 second variants instead of merely trimming.",
+        "Give on-screen copy, narration, and visual action distinct jobs.",
+        "Connect the CTA to the work's honest promise and next action without deceptive claims."
+      ],
+      "required_local_skills": ["a2a-automation-system", "a2a-media-documents"],
+      "upstream_capability_sources": ["aivideogenerator:hooks-retention", "aivideogenerator:video-script", "aivideogenerator:voiceover-script", "aivideogenerator:shorts-reels-tiktok"],
+      "required_capabilities": ["three-second-hook", "beat-sheet", "timed-script", "cta-validation"],
+      "expected_artifacts": ["three hook candidates", "beat sheet", "timed script", "CTA validation"],
+      "gpu_policy": "none",
+      "evidence_rule": "A hook is accepted only with a promised payoff and a non-deceptive CTA."
+    },
+    {
+      "id": "brand-strategy",
+      "name_ko": "브랜드 전략팀",
+      "team_patterns": ["brand", "growth"],
+      "role_patterns": ["BRAND_", "GROWTH_STRATEGIST", "CONVERSION_ARCHITECT"],
+      "knowledge": [
+        "Translate the brand promise into color, material, typography, speed, easing, and camera behavior.",
+        "Lock recurring characters with front, left, right, and back views plus full-body and portrait references.",
+        "Define allowed variation and prohibited drift for every reusable brand asset.",
+        "Treat featured motion as a brand memory device rather than decoration."
+      ],
+      "required_local_skills": ["a2a-ui-design", "a2a-automation-system"],
+      "upstream_capability_sources": ["webdesign:brand-for-web", "aivideogenerator:character-consistency", "uiuxdesigner:color-typography-theming"],
+      "required_capabilities": ["brand-motion-language", "character-reference-sheet", "tone-system", "drift-constraints"],
+      "expected_artifacts": ["brand motion language", "character reference sheet", "tone table", "allowed and prohibited variation list"],
+      "gpu_policy": "low; prefer cloud generation for heavy image work",
+      "evidence_rule": "Brand decisions must trace to the project promise and remain consistent across pages and scenes."
+    },
+    {
+      "id": "design-art",
+      "name_ko": "디자인·미술팀",
+      "team_patterns": ["design", "contract", "build-contract", "implementation-contract"],
+      "role_patterns": ["DESIGN_", "PAGE_PROMPT_EDITOR", "BUILD_PROMPT_", "PAGE_SPECIALIST"],
+      "knowledge": [
+        "Evaluate visual appeal and conversion usability separately.",
+        "Author per-page layer contracts for hierarchy, gaze flow, CTA, imagery, typography, spacing, and states.",
+        "Use validated, stylistically consistent, commercially licensed icon assets instead of arbitrary low-quality SVGs.",
+        "Extract principles and visual grammar from references without copying proprietary layouts."
+      ],
+      "required_local_skills": ["a2a-ui-design", "a2a-app-web-builder"],
+      "upstream_capability_sources": ["frontend-design-premium:frontend-design-premium", "uiuxdesigner:layout-grid-hierarchy", "uiuxdesigner:design-system-builder", "uiuxdesigner:conversion-optimization"],
+      "required_capabilities": ["page-layer-contract", "design-tokens", "state-design", "conversion-rationale"],
+      "expected_artifacts": ["page layer contract", "design tokens", "state matrix", "conversion rationale"],
+      "gpu_policy": "low",
+      "evidence_rule": "Design approval requires page-specific contracts and rendered comparison evidence."
+    },
+    {
+      "id": "cinematography-lighting-compositing",
+      "name_ko": "촬영·조명·합성팀",
+      "team_patterns": ["media-production", "media-preproduction"],
+      "role_patterns": ["LIGHTING_", "VISUAL_COMPOSITION_", "LIVE_ACTION_", "CAMERA_", "COMPOSIT"],
+      "knowledge": [
+        "Record light direction, color temperature, exposure, shadow, reflection, and material response per scene.",
+        "Make camera movement follow action causality rather than adding purposeless shake.",
+        "Protect functional UI surfaces with explicit subject and motion safe areas.",
+        "Verify contact shadows, focus, grain, depth, and light continuity for composites."
+      ],
+      "required_local_skills": ["a2a-automation-system", "a2a-ui-design"],
+      "upstream_capability_sources": ["aivideogenerator:cinematic-style-lighting", "aivideogenerator:camera-motion-prompts", "imagetovideo:camera-moves", "imagetovideo:artifact-fixes"],
+      "required_capabilities": ["shot-card", "lighting-diagram", "functional-safe-area", "composite-qa"],
+      "expected_artifacts": ["shot cards", "lighting diagram", "safe-area map", "composite QA evidence"],
+      "gpu_policy": "low for cloud generation; medium for local compositing",
+      "evidence_rule": "Inspect multiple timeline frames and repair only the failing shot or layer."
+    },
+    {
+      "id": "motion-graphics",
+      "name_ko": "모션그래픽팀",
+      "team_patterns": ["media-production", "motion-verification"],
+      "role_patterns": ["MOTION_", "FLOW_VIDEO_PRODUCER", "MOTION_ASSET_PRODUCER"],
+      "knowledge": [
+        "Design featured movement as start, action, reaction, and settle.",
+        "Reject simple oscillation as finished motion; include acceleration, deceleration, weight, inertia, and secondary response.",
+        "Coordinate typography, character, object, camera, and transition timing on one rhythm map.",
+        "Compare near-final timing versions and repair only the affected object, scene, or timecode."
+      ],
+      "required_local_skills": ["a2a-automation-system", "a2a-ui-design"],
+      "upstream_capability_sources": ["engineering-suite-motion-design:entry-motion-design", "engineering-suite-motion-design:gpt-taste", "uiuxdesigner:microinteractions-motion", "imagetovideo:motion-prompts"],
+      "required_capabilities": ["motion-beat-sheet", "easing-timing-map", "object-timeline", "selective-timecode-repair"],
+      "expected_artifacts": ["motion beat sheet", "easing and timing map", "object timeline", "repair timecodes"],
+      "gpu_policy": "none for design; low to medium for preview",
+      "evidence_rule": "Motion completion requires moving-frame evidence across the intended timeline."
+    },
+    {
+      "id": "flow-video-editing",
+      "name_ko": "Google Flow·Vids 편집팀",
+      "team_patterns": ["media-production", "media-postproduction", "media-verification", "media-acceptance"],
+      "role_patterns": ["FLOW_", "SCENE_ASSEMBLY_", "RENDER_", "INDEPENDENT_MEDIA_", "MEDIA_QUALITY_"],
+      "knowledge": [
+        "Use model-specific prompt contracts instead of sending one generic prompt to every model.",
+        "Specify visual style, timed scenes, camera, causal action, physical response, and negative constraints.",
+        "Compare models at equivalent resolution and delivery settings.",
+        "Join clips using start and end frames, identity, costume, props, light, and motion direction continuity."
+      ],
+      "required_local_skills": ["a2a-automation-system", "a2a-media-documents"],
+      "upstream_capability_sources": ["aivideogenerator:text-to-video-prompts", "aivideogenerator:scene-storyboard", "aivideogenerator:video-editing-plan", "imagetovideo:start-end-frames"],
+      "required_capabilities": ["model-specific-prompt", "generation-receipt", "edit-timeline", "continuity-validation"],
+      "expected_artifacts": ["model-specific prompt", "generation id and media hash", "edit timeline", "continuity validation"],
+      "gpu_policy": "low for cloud tools; local editing is CPU-budgeted",
+      "evidence_rule": "Require generation identifiers, hashes, metadata, and moving-frame evidence; use recovery instead of halting."
+    },
+    {
+      "id": "music-sound",
+      "name_ko": "음악·음향팀",
+      "team_patterns": ["media-acquisition", "media-postproduction"],
+      "role_patterns": ["VOICE_", "CAPTION_", "BGM_", "AUDIO_", "SOUND_"],
+      "knowledge": [
+        "Keep the work understandable without sound and strengthen emotion and causality when sound is enabled.",
+        "Place sound only where transitions, impacts, actions, or CTA comprehension benefit.",
+        "Record commercial-use, platform, duration, and edit rights for every music, effect, and voice asset.",
+        "Check narration, music, and effects for frequency and loudness conflicts."
+      ],
+      "required_local_skills": ["a2a-media-documents", "a2a-automation-system"],
+      "upstream_capability_sources": ["aivideogenerator:music-sound-design", "aivideogenerator:captions-subtitles", "aivideogenerator:voiceover-script"],
+      "required_capabilities": ["audio-cue-sheet", "loudness-check", "subtitle-track", "audio-rights-ledger"],
+      "expected_artifacts": ["audio cue sheet", "loudness report", "subtitle file", "audio rights ledger"],
+      "gpu_policy": "none",
+      "evidence_rule": "Verify muted comprehension and enabled-audio balance separately."
+    },
+    {
+      "id": "copyright-legal",
+      "name_ko": "저작권·법무팀",
+      "team_patterns": ["research-verification", "media-acquisition", "delivery"],
+      "role_patterns": ["SECURITY_LEGAL", "MATERIAL_RIGHTS_", "RIGHTS_", "LEGAL_"],
+      "knowledge": [
+        "Verify rights per asset rather than trusting a free or paid platform label.",
+        "Record commercial use, derivative use, redistribution, platform, territory, term, people, and trademarks.",
+        "Preserve receipts, terms snapshots, download dates, and original URLs.",
+        "Treat fair use, licensing, security, and product claims as official-verification-required."
+      ],
+      "required_local_skills": ["a2a-research-browser", "a2a-security-recovery", "browser-skill"],
+      "upstream_capability_sources": ["browser-skill", "aivideogenerator:video-review", "aivideogenerator:captions-subtitles"],
+      "required_capabilities": ["rights-ledger", "terms-snapshot", "asset-approval", "official-source-verification"],
+      "expected_artifacts": ["rights ledger", "receipt and terms snapshots", "approved and excluded asset list"],
+      "gpu_policy": "none",
+      "evidence_rule": "No legal conclusion is accepted from community evidence alone."
+    },
+    {
+      "id": "web-app-technical-integration",
+      "name_ko": "웹·앱 기술 통합팀",
+      "team_patterns": ["page-preparation", "implementation", "integration"],
+      "role_patterns": ["PAGE_IMPLEMENTER", "PAGE_SPECIALIST", "INTEGRATION_OWNER", "RENDER_ENGINEER"],
+      "knowledge": [
+        "Keep app, web, responsive, landing, detail, and shorts deliverables platform-specific.",
+        "Validate mobile apps against touch, Android, iOS, WebView, and packaged-build behavior.",
+        "Test performance, keyboard, screen reader, reduced motion, and responsive behavior.",
+        "For data-backed work, verify authentication, RLS or equivalent record authorization, and tenant boundaries."
+      ],
+      "required_local_skills": ["a2a-app-web-builder", "a2a-mobile-android", "a2a-security-recovery"],
+      "upstream_capability_sources": ["engineering-suite-motion-design:frontend-ui-engineering", "test-android-apps:android-emulator-qa", "test-android-apps:android-performance", "uiuxdesigner:accessibility-audit"],
+      "required_capabilities": ["platform-build", "accessibility-audit", "performance-record", "authorization-boundary-test"],
+      "expected_artifacts": ["platform-specific build", "accessibility report", "performance record", "RLS or authorization evidence"],
+      "gpu_policy": "low for browser; medium for Android emulator only during QA",
+      "evidence_rule": "A page is complete only after the relevant platform build and boundary tests run."
+    },
+    {
+      "id": "independent-qa-recovery",
+      "name_ko": "독립 검증·복구팀",
+      "team_patterns": ["analysis-verification", "research-verification", "growth-verification", "design-verification", "contract-verification", "implementation-contract-verification", "screenwriting-verification", "media-verification", "page-verification", "motion-verification", "verification", "acceptance"],
+      "role_patterns": ["VERIFIER", "QUALITY_", "_QA", "VALIDATOR", "RECOVERY_ENGINEER"],
+      "knowledge": [
+        "Use an independent worker to compare requirement, artifact, and evidence at atomic granularity.",
+        "Preserve passed units and reopen only failed scenes, objects, files, or timecodes.",
+        "Verify actual execution, clicks, logs, memory, and moving frames before completion.",
+        "Handle blockage as classify cause, choose safe alternative, repair bounded scope, and reverify."
+      ],
+      "required_local_skills": ["a2a-security-recovery", "a2a-core-runtime"],
+      "upstream_capability_sources": ["aivideogenerator:video-review", "imagetovideo:video-review", "product-design:audit", "webdesign:design-review"],
+      "required_capabilities": ["atomic-checklist", "reproduction-package", "defect-ledger", "selective-recovery"],
+      "expected_artifacts": ["atomic checklist", "reproduction package", "defect ledger", "selective recovery receipt"],
+      "gpu_policy": "low",
+      "evidence_rule": "A worker claim is not approval; independently inspect and test the changed artifact."
+    },
+    {
+      "id": "asset-version-delivery",
+      "name_ko": "자산·버전·납품 운영팀",
+      "team_patterns": ["delivery", "media-acquisition", "media-postproduction"],
+      "role_patterns": ["DELIVERY_", "MATERIAL_", "ASSET_", "RENDER_", "MEDIA_POSTPRODUCTION_"],
+      "knowledge": [
+        "Separate source, working, approved, and delivery assets with hashes and versions.",
+        "Separate conversation and project memory from reusable organization rules.",
+        "Apply explicit ownership policy when deleting conversation records and result folders while preserving shared assets.",
+        "Deliver run instructions, settings, licenses, source, builds, and recovery procedures together."
+      ],
+      "required_local_skills": ["a2a-media-documents", "a2a-core-runtime"],
+      "upstream_capability_sources": ["aivideogenerator:video-editing-plan", "imagetovideo:editing-export", "template-creator:template-creator", "documents:documents"],
+      "required_capabilities": ["asset-manifest", "hash-ledger", "backup-recovery-test", "customer-handoff-package"],
+      "expected_artifacts": ["asset manifest", "hash and version ledger", "backup recovery receipt", "customer handoff package"],
+      "gpu_policy": "none",
+      "evidence_rule": "Delivery requires reproducible files, hashes, rights records, and recovery instructions."
+    }
+  ]
+}
+
